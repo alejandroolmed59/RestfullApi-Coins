@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1  Administrador de videojuegos
+  
+  form(action="/api/Videojuegos", method='POST', name='formRegistro' class='formRegistro')
+    .formContenedor
+      input#titulo(type="text", name="titulo", placeholder='Titulo')
+      input#desarrolladora(type="text", name="desarrolladora", placeholder='Desarrolladora') 
+      input#ign(type="text", name="ign", placeholder='IGN')
+      input#enviar(type="submit", value="Guardar")
+
+  .contenedor
+    table
+      tr
+        th ID
+        th Videojuego
+        th Desarrolladora
+        th IGN
+        th Opcion
+      tbody.tablaALlenar
+    script(src="javascripts/main.js")
